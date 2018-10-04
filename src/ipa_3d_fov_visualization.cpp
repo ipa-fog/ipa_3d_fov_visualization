@@ -31,8 +31,8 @@ public:
    */
   FOVNode ()
   {
-      pub_marker = n.advertise<visualization_msgs::Marker>("cam_fov",10);
-      sub_cam = n.subscribe("camera_info", 10, &FOVNode::camCallback, this);
+      pub_marker_ = n_.advertise<visualization_msgs::Marker>("cam_fov",10);
+      sub_cam_ = n_.subscribe("camera_info", 10, &FOVNode::camCallback, this);
   }
 
   /** Empty Destructor */
@@ -42,10 +42,10 @@ public:
   }
 
 private:
-  ros::NodeHandle n; //!< ROS node handle.
+  ros::NodeHandle n_; //!< ROS node handle.
 
-  ros::Publisher pub_marker;
-  ros::Subscriber sub_cam;
+  ros::Publisher pub_marker_;
+  ros::Subscriber sub_cam_;
   void camCallback(const sensor_msgs::CameraInfo::ConstPtr& msg);
 };
 
@@ -135,7 +135,7 @@ void FOVNode::camCallback(const sensor_msgs::CameraInfo::ConstPtr& msg)
             cam_poly.points.push_back(p6);
             cam_poly.points.push_back(p2);
 
-            pub_marker.publish(cam_poly);
+            pub_marker_.publish(cam_poly);
 
         }
 }
