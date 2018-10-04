@@ -2,7 +2,7 @@
 This package visualizes the field of view (FOV) form stereo cameras using the pinhole model.
 
 ## Requirements:
-1. System with Ubuntu14.04+ and ROS http://wiki.ros.org
+1. System with Ubuntu and ROS http://wiki.ros.org (testet with ROS-Kinetic)
 1. Stereo Camera (testet with Intel RealSense D435)
 
 ## Usage:
