@@ -14,7 +14,7 @@ This package visualizes the field of view (FOV) form stereo cameras using the pi
 
 ## Developers:
 
-To change the line width, color and transparency please go to cpp-File, line 39-43 
+To change the line width, color and transparency please go to cpp-File, line 71-74
 
 ![fov](img_fov.png)
 
